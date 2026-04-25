@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Simplified by Chitransh</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body {
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+  color:white;
+  scroll-behavior:smooth;
+}
+
+/* NAV */
+nav {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 8%;
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter:blur(10px);
+}
+
+nav h2 {color:#38bdf8;}
+nav a {color:white;margin-left:20px;text-decoration:none;}
+
+/* HERO */
+.hero {
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:0 8%;
+}
+
+.hero h1 {font-size:3rem;}
+.hero span {color:#38bdf8;}
+.hero p {margin:20px 0;color:#cbd5f5;max-width:500px;}
+
+.btn {
+  padding:12px 25px;
+  background:#38bdf8;
+  color:black;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* SECTIONS */
+section {padding:60px 8%;}
+
+/* CARDS */
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:15px;
+  backdrop-filter:blur(10px);
+  transform:translateY(40px);
+  opacity:0;
+  transition:0.6s;
+}
+
+.card.show {
+  transform:translateY(0);
+  opacity:1;
+}
+
+/* YOUTUBE */
+.video {
+  display:flex;
+  justify-content:center;
+  margin-top:20px;
+}
+
+iframe {
+  width:90%;
+  max-width:600px;
+  height:315px;
+  border-radius:10px;
+}
+
+/* EMAIL BOX */
+.email-box {
+  margin-top:20px;
+}
+
+input {
+  padding:10px;
+  width:250px;
+  border:none;
+  border-radius:5px;
+}
+
+button {
+  padding:10px 20px;
+  border:none;
+  background:#38bdf8;
+  font-weight:bold;
+  margin-left:10px;
+  border-radius:5px;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:20px;
+  background:#020617;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>AI Simplified</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#learn">Learn</a>
+    <a href="#youtube">YouTube</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Learn <span>AI</span> & Make Money Online</h1>
+  <p>I help beginners in India learn AI tools, grow on YouTube, and earn online.</p>
+  <a href="#learn" class="btn">Start Learning</a>
+</div>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hi, I'm Chitransh. I simplify AI and online earning so beginners can take action.</p>
+</section>
+
+<section id="learn">
+  <h2>What You'll Learn</h2>
+  <div class="cards">
+    <div class="card">AI Tools & Automation</div>
+    <div class="card">Make Money Online</div>
+    <div class="card">YouTube Growth</div>
+  </div>
+</section>
+
+<section id="youtube">
+  <h2>Watch My Content</h2>
+  <div class="video">
+    <iframe src="https://youtube.com/@wealthwalabot?si=H6HSm74GW3m5xkZL" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Get Free AI Guide</h2>
+  <p>Enter your email to receive top AI tools list.</p>
+
+  <div class="email-box">
+    <input type="email" placeholder="Enter your email">
+    <button>Get Guide</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 AI Simplified by Chitransh</p>
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    if(cardTop < window.innerHeight - 50){
+      card.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
